@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Chelsea+Market&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image:url(./images/bg.jpg);
+    background-size: cover;
+    font-family: 'Chelsea Market', cursive;
+}
+
+.cardbg{
+    background-color: rgba(0, 0, 0, 0.397);
+    color: white;
+    padding:30px;
+}
+
+button{
+    outline: none;
+    border: none;
+    padding: 5px 30px;
+    border-radius: 5px;
+    color: white;
+    background: #D46731;
+}
+.prediction{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}

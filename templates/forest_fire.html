@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Forest Fire Prediction App</title>
+  <link rel="icon" href="https://image.flaticon.com/icons/svg/2950/2950411.svg" type="image/icon type">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+<div class="container justify-content-center mt-2">
+  <h1 class="text-white mt-2">Forest Fire Prediction App</h1>
+  <h5 class="text-white ">Predict the percentage of Forest-Fire Occurence</h5>
+  <form action='/predict' method="post">
+   <div class="row">
+     <div class="col-sm-12 col-lg-6 cardbg">
+       <div class="row">
+        <div class="col-12 mt-3 mb-1">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Temperature</label>
+            <input  class="form-control validate border border-warning" placeholder="Temperature in Celsius" name="Temperature" id="first_name" type="text" >
+          </div>
+         </div>
+         <div class="col-12 mb-3">
+          <label for="exampleInputEmail1">Oxygen Level</label> 
+          <input id="last_name" name="Oxygen" placeholder="Oxygen content in ppm"  type="text" class="validate form-control border border-warning">
+         </div>
+         <div class="col-12 mb-3">
+          <label for="exampleInputEmail1">Humidity Level</label>
+          <input  id="_name" name="Humidity" placeholder="Humidity %" type="text" class="validate form-control border border-warning">
+         </div>
+         <div class="ml-3 mb-1 mt-2">
+           <button type="submit" class="button">Predict Fire</button>
+        </div>
+       </div>
+     </div>
+     <div class="col-sm-12 col-lg-4  d-flex align-items-center">
+      <h4 class="prediction">{{pred}}</h4>
+     </div>
+   </div>
+  </form>
+  </div>
+
+
+  <br/>
+
+
+  
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
